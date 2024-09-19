@@ -3,25 +3,28 @@ Challenge Description:
 We have noticed some weird actions on our website , we think that our passwd file has been compromised , can you make sure that it is secure
 
 Step 1:
-when you open the chakenge link you will see a login page i try to do a sqli didn't work then 
+Step 1: When you open the challenge link, you will see a login page. I tried to perform SQL injection, but it didn't work. 
+
+![image](https://github.com/user-attachments/assets/9ad0d611-1c88-4a6c-819f-3f3b47d1b79a)
 
 Step 2:
-i open the page sourse i found a username and password 
+ I opened the page source and found a username and password.
 
 ![image](https://github.com/user-attachments/assets/47456439-1562-4c0a-b120-66badd4f3268)
 
 step 3:
-whe i login there is nothing useful i try bunch of thing like dir fuzzing no resalt
+When I logged in, there was nothing useful. I tried various methods like directory fuzzing, but there were no results.
 
 step4:
- i notice there is a Remember me button when i cheaked it  there is new cookie apper after same search i found that cookie is a pickle serialization
+I noticed there was a "Remember Me" button. When I checked it, a new cookie appeared. After some searching, I found that the cookie is a Pickle serialization.
 
 step 5: 
-i try to deserialize i try to decode as base64 but the apper in a unreadable text 
+I tried to deserialize it and decode it as base64, but it appeared as unreadable text.
+
 ![image](https://github.com/user-attachments/assets/99a6ae69-8641-46b6-ab96-a843d92f77a7)
 
 step 6:
-i try use code i found in the internet but the same thing after same deging i found why the apper in unredable text i write this code to deserialize
+ I tried using code I found on the internet, but it produced the same unreadable text. After some debugging, I figured out why it was unreadable. I wrote this code to deserialize:
 
 ```
 import pickle
@@ -46,7 +49,7 @@ print(deserialized_data)
 the output of this code be like this ```usr(username='test', password='test')```
 
 step 7:
-Then i write code to make my own serializa cookie i write this code 
+Then I wrote code to create my own serialized cookie. Here’s the code I used:
 ```
 import pickle
 import base64
@@ -73,5 +76,4 @@ if __name__ == '__main__':
     encoded_urlsafe = base64.urlsafe_b64encode(pickled)
     print(encoded_urlsafe)
 ```
-Then i make a rev shell then after genrate the cookie change it with cookie in the website 
-after getting the rev shell i try to search to found the flag but notheing there called flag.txt samething like that after a reread the Description i notice i will found in the /etc/passwd file 
+I then created a reverse shell, generated the cookie, and replaced it with the cookie on the website. After getting the reverse shell, I tried to search for the flag, but I found nothing called flag.txt or anything similar. After rereading the description, I realized I would find it in the /etc/passwd file.
