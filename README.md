@@ -5,7 +5,8 @@ We have noticed some weird actions on our website , we think that our passwd fil
 Step 1:
 when you open the chakenge link you will see a login page i try to do a sqli didn't work then 
 Step 2:
-i open the page sourse i found a username and password  
+i open the page sourse i found a username and password 
+![image](https://github.com/user-attachments/assets/47456439-1562-4c0a-b120-66badd4f3268)
 step 3:
 whe i login there is nothing useful i try bunch of thing like dir fuzzing 
 
