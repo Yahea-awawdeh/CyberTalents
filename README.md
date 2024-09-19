@@ -11,7 +11,7 @@ i open the page sourse i found a username and password
 ![image](https://github.com/user-attachments/assets/47456439-1562-4c0a-b120-66badd4f3268)
 
 step 3:
-whe i login there is nothing useful i try bunch of thing like dir fuzzing 
+whe i login there is nothing useful i try bunch of thing like dir fuzzing no resalt
 
 step4:
  i notice there is a Remember me button when i cheaked it  there is new cookie apper after same search i found that cookie is a pickle serialization
